@@ -1,0 +1,22 @@
+services:
+  mtp-gateway:
+    build:
+      context: ..
+      dockerfile: deploy/Dockerfile
+      target: runtime
+    user: "65532:65532"
+    network_mode: host
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    read_only: true
+    restart: unless-stopped
+    mem_limit: 384m
+    pids_limit: 128
+    ulimits:
+      nofile: {soft: 8192, hard: 8192}
+    volumes:
+      - /etc/mtp-gateway-container/etc:/etc/mtp-gateway:ro,Z
+      - /etc/mtp-gateway-container/state:/var/lib/mtp-gateway:ro,Z
+    tmpfs:
+      - /run/mtp-gateway:mode=0777,size=8m
+    stop_grace_period: 20s

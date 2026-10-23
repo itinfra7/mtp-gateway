@@ -1,0 +1,19 @@
+[package]
+name = "mtp-gateway-fuzz"
+version = "0.1.0"
+publish = false
+license = "AGPL-3.0-only"
+authors = ["itinfra7 from GitHub"]
+edition = "2024"
+[package.metadata]
+cargo-fuzz = true
+[dependencies]
+libfuzzer-sys = "=0.4.13"
+mtp-protocol = { path = "../crates/protocol" }
+mtp-transport = { path = "../crates/transport" }
+[[bin]]
+name = "network_parsers"
+path = "fuzz_targets/network_parsers.rs"
+test = false
+doc = false
+bench = false

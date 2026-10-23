@@ -1,0 +1,15 @@
+{
+  "repository": "https://github.com/telegramdesktop/tdesktop",
+  "commit": "a7f453612f4896ac04d0007a36ab0d377e5bcbcf",
+  "files": {
+    "LICENSE": "a728b65d02eeaf6b50c075a33b76107c652c3e5a12ff67f53682c83d47a23e1e",
+    "connection_tcp.cpp": "8ef49c52490ec4e81b6b4d06364ffe821618817f94d01f8f8c2897f11f69e098",
+    "connection_tcp.h": "b2e8f231f77107dd371bf8b4c9817caf7c86058e2936e6e0a0b2c8354462c10f",
+    "mtproto_tcp_socket.cpp": "1b4b536ebe9f7153045db6058234b7ec07cc8404466ce10419f12fbfc6b2c87b",
+    "mtproto_tcp_socket.h": "0d067daf6f24ff08f8fead3711b147d760059b4be406b98b54063e12da0f6d6d",
+    "mtproto_tls_socket.cpp": "3eac0130de2c0b98c9eaf299fc7f17f4014a9f55b9de6772527eac7cfbc976e1",
+    "transports.md": "1c13f1b89c01b7039c8a75f2ab2497731786a4cf68a3f7b8e0e98beda2885891"
+  },
+  "official_transport_sha256": "1c13f1b89c01b7039c8a75f2ab2497731786a4cf68a3f7b8e0e98beda2885891",
+  "layout_reference": "paths.json에 공식 저장소 원래 경로 보존. 독립 Python/OpenSSL 벡터는 tests/interoperability/generate.py로 재생성."
+}

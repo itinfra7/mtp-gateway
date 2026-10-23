@@ -1,0 +1,10 @@
+target
+work
+fuzz/target
+fuzz/corpus
+fuzz/artifacts
+.git
+**/*.pass
+**/*-key.pem
+
+deploy/selinux/tmp

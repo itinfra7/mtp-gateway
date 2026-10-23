@@ -1,0 +1,8 @@
+[
+  "Telegram/SourceFiles/mtproto/connection_tcp.cpp",
+  "Telegram/SourceFiles/mtproto/connection_tcp.h",
+  "Telegram/SourceFiles/mtproto/details/mtproto_tcp_socket.cpp",
+  "Telegram/SourceFiles/mtproto/details/mtproto_tcp_socket.h",
+  "Telegram/SourceFiles/mtproto/details/mtproto_tls_socket.cpp",
+  "Telegram/SourceFiles/mtproto/details/mtproto_tls_socket.h"
+]

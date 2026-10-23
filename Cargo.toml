@@ -1,0 +1,45 @@
+[workspace]
+resolver = "3"
+members = ["crates/protocol", "crates/transport", "crates/relay", "crates/gateway", "crates/test-peer"]
+exclude = ["fuzz"]
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.98.1"
+license = "AGPL-3.0-only"
+authors = ["itinfra7 from GitHub"]
+repository = "https://github.com/itinfra7/mtp-gateway"
+[workspace.dependencies]
+anyhow = "=1.0.104"
+tokio = { version = "=1.53.1", features = ["full"] }
+tokio-util = { version = "=0.7.19", features = ["rt"] }
+bytes = "=1.12.1"
+serde = { version = "=1.0.229", features = ["derive"] }
+serde_json = "=1.0.151"
+thiserror = "=2.0.21"
+ring = "=0.17.14"
+aes = "=0.9.3"
+ctr = "=0.10.1"
+subtle = "=2.6.1"
+hex = "=0.4.3"
+idna = "=1.1.0"
+rustls = { version = "=0.23.46", default-features = false, features = ["std", "ring"] }
+tokio-rustls = { version = "=0.26.6", default-features = false, features = ["ring"] }
+rustls-pemfile = "=2.2.0"
+rcgen = { version = "=0.14.10", default-features = false, features = ["pem", "ring", "x509-parser"] }
+hickory-proto = { version = "=0.26.3", default-features = false }
+ipnet = { version = "=2.12.2", features = ["serde"] }
+toml = "=0.9.12"
+clap = { version = "=4.5.60", features = ["derive"] }
+futures-util = "=0.3.32"
+tracing = "=0.1.44"
+tracing-subscriber = { version = "=0.3.22", features = ["env-filter", "json"] }
+socket2 = "=0.6.5"
+nix = { version = "=0.31.2", features = ["socket", "net", "uio"] }
+time = { version = "=0.3.55", features = ["formatting"] }
+[profile.release]
+opt-level = 2
+lto = "thin"
+codegen-units = 4
+strip = true
+

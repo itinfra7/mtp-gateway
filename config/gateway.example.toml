@@ -1,0 +1,35 @@
+# init이 실제 PKI와 함께 생성하는 구성의 운영 배치 예시다.
+listen = ["0.0.0.0:8443", "[::]:8443"]
+secret_file = "/etc/mtp-gateway/secret.ee"
+server_cert = "/etc/mtp-gateway/server.pem"
+server_key = "/etc/mtp-gateway/server-key.pem"
+client_ca = "/etc/mtp-gateway/client-ca.pem"
+registry_file = "/var/lib/mtp-gateway-admin/state/registry.json"
+metrics_socket = "/run/mtp-gateway/status.sock"
+log_domains = false
+[resolver]
+address = "9.9.9.9:53"
+mode = "udp"
+timeout_seconds = 3
+cache_entries = 1024
+[policy]
+allow = []
+deny = []
+management_addresses = []
+[limits]
+connections = 64
+streams = 512
+handshakes = 16
+handshakes_per_second = 16
+handshake_seconds = 10
+connect_seconds = 8
+tcp_idle_seconds = 300
+udp_idle_seconds = 120
+drain_seconds = 15
+buffer_bytes = 67108864
+connection_buffer_bytes = 16777216
+replay_entries = 4096
+tcp_per_connection = 512
+udp_per_connection = 512
+dns_inflight = 32
+control_queue = 1024

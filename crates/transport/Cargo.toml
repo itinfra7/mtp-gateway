@@ -1,0 +1,24 @@
+[package]
+name = "mtp-transport"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+authors.workspace = true
+repository.workspace = true
+[dependencies]
+mtp-protocol = { path = "../protocol" }
+anyhow.workspace = true
+tokio.workspace = true
+bytes.workspace = true
+ring.workspace = true
+aes.workspace = true
+ctr.workspace = true
+subtle.workspace = true
+hex.workspace = true
+rustls.workspace = true
+tokio-rustls.workspace = true
+rustls-pemfile.workspace = true
+tracing.workspace = true
+
+[dev-dependencies]
+serde_json.workspace = true
